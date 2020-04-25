@@ -1,0 +1,35 @@
+package testsystem;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main
+{
+
+    static List<Car> list_all = new ArrayList<>();
+
+    static List<Car> list_S2W = new ArrayList<>();
+    static List<Car> list_S2N = new ArrayList<>();
+    static List<Car> list_S2E = new ArrayList<>();
+
+    static List<Car> list_N2E = new ArrayList<>();
+    static List<Car> list_N2S = new ArrayList<>();
+    static List<Car> list_N2W = new ArrayList<>();
+
+    static List<Car> list_E2S = new ArrayList<>();
+    static List<Car> list_E2W = new ArrayList<>();
+    static List<Car> list_E2N = new ArrayList<>();
+
+    static List<Car> list_W2N = new ArrayList<>();
+    static List<Car> list_W2E = new ArrayList<>();
+    static List<Car> list_W2S = new ArrayList<>();
+    static Map map = new Map();
+    public static void main(String[] args)
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            Car car = new Car();
+            new Thread(car).start();
+        }
+    }
+}
