@@ -1,0 +1,28 @@
+package testsystem;
+
+import java.awt.Color;
+import javax.swing.JFrame;
+
+@SuppressWarnings("serial")
+public final class Map extends JFrame
+{
+
+    public Map()
+    {
+        initialize();
+        MyCanvas mycanvas = new MyCanvas();
+        this.getContentPane().add(mycanvas);
+        mycanvas.setSize(this.getWidth(), this.getHeight());
+        this.setLayout(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void initialize()
+    {
+        this.setTitle("Traffic System");
+        this.setBounds(500, 130, 1200, 900);//500,130
+        this.setBackground(new Color(145, 145, 145));
+        this.setVisible(true);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
