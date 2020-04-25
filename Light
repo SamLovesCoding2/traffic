@@ -1,0 +1,32 @@
+package testsystem;
+
+public class Light
+{
+
+    public static final int light_yellow = 0;
+    public static final int light_red = 1;
+    public static final int light_green = 2;
+    String light_img[] =
+    {
+        "src/pictures/1/yellow.png", "src/pictures/1/red.png", "src/pictures/1/green.png"
+    };
+    int x, y;
+    int status;
+
+    public Light(int x, int y, int status)
+    {
+        this.x = x;
+        this.y = y;
+        this.status = status;
+    }
+
+    public String getphoto()
+    {
+        return this.light_img[status];
+    }
+
+    public int get_status()
+    {
+        return this.status;
+    }
+}
